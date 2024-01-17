@@ -2,15 +2,10 @@
 
 An HTML template for a marketplace.
 
-## Installation
+## How to use
 
-```shell
+```sh
 npm install
-```
-
-## Usage
-
-```shell
 npm start
 ```
 
