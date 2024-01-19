@@ -8,68 +8,260 @@
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
-        <h1 class="h4">
+    <header>
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
           <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bootstrap-fill d-inline-block me-2" viewBox="0 0 16 16">
-              <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375v2.725z"/>
-              <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4h-8zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396H5.062z"/>
+            <svg width="119" height="72" viewBox="0 0 119 72" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect x="0.5" width="118" height="72" fill="url(#pattern0)"/>
+              <defs>
+              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+              <use xlink:href="#image0_2_2" transform="scale(0.00847458 0.0138889)"/>
+              </pattern>
+              <image id="image0_2_2" width="118" height="72" xlink:href="data:image/png;base64,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"/>
+              </defs>
             </svg>
-            <span>Marketplace</span>
           </a>
-        </h1>
-        <a href="https://github.com/twbs/examples/tree/main/vite/" target="_blank" rel="noopener">View on GitHub</a>
-      </header>
+          <form class="w-50" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Search by keyword or part number..." aria-label="Search by keyword or part number..." aria-describedby="button-addon2">
+              <button class="btn btn-primary btn-lg" type="button" id="button-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg></button>
+            </div>
+          </form>
+          <div class="d-flex align-items-start">
+            <div class="d-flex align-items-center me-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-cart3 me-2" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
+              <div class="d-flex align-items-end flex-column">
+                <div><small class="fw-light"><span class="cart-items">0</span> items</small></div>
+                <div><span class="cart-amount fw-semibold">₱420.69</span></div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle me-2" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+              </svg>
+              <div class="d-flex align-items-end flex-column">
+                <small class="fw-light"><a class="link-secondary link-noline" href="#">Login</a> / <a class="link-secondary link-noline" href="#">Register</a></small>
+                <ul class="nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle link-dark fw-semibold p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      My Account
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Order history</a></li>
+                      <li><a class="dropdown-item" href="#">Account settings</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <nav class="navbar navbar-expand-lg bg-primary py-1" data-bs-theme="dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link-light" href="#">Manufacturers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link-light" href="#">Resources</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-      <main>
-        <h1>Welcome</h1>
-        <div class="col-lg-8 px-0">
-          <p class="fs-4">You've successfully loaded the Bootstrap + Vite example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and uses Vite to compile and bundle our Sass and JavaScript.</p>
-          <p>If this button appears blue and the link appears purple, you've done it!</p>
+    <main>
+      <div class="container">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/slide-1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/slide-2.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/slide-3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
 
-        <button type="button" class="btn btn-primary me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-        <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <div>
-              Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+        <div id="productCategories" class="py-3 mt-3">
+          <h4>Categories</h4>
+          <div class="grid">
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Single-Board Computers</a>
             </div>
-            <div class="dropdown mt-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Microcontrollers</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Passive Components</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Sensors</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Displays</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Actuators</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Semiconductors</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Discrete Components</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Connectors</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Electromechanical</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Test Equipments</a>
+            </div>
+            <div class="g-col-2 position-relative">
+              <img src="assets/img/microcontrollers.jpg" class="img-fluid rounded mb-2" alt="Microcontrollers">
+              <a class="stretched-link link-noline" href="#">Prototyping</a>
             </div>
           </div>
         </div>
 
-        <hr class="col-1 my-5 mx-0">
+        <div id="newProducts" class="py-3">
+          <h4>New Products</h4>
+          <div class="grid">
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="g-col-3">
+              <div class="card">
+                <img src="assets/img/arduino-uno-r3.jpg" class="card-img-top" alt="Ardunio Uno R3">
+                <div class="card-body text-center">
+                  <h5 class="card-title"><a class="link-noline" href="#">Ardunio Uno R3</a></h5>
+                  <p class="card-text">₱420.69</p>
+                  <a href="#" class="btn btn-primary text-uppercase">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-        <h2>Guides</h2>
-        <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
-        <ul class="icon-list">
-          <li><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap quick start guide</a></li>
-          <li><a href="https://getbootstrap.com/docs/5.3/getting-started/webpack/">Bootstrap Webpack guide</a></li>
-          <li><a href="https://getbootstrap.com/docs/5.3/getting-started/parcel/">Bootstrap Parcel guide</a></li>
-          <li><a href="https://getbootstrap.com/docs/5.3/getting-started/vite/">Bootstrap Vite guide</a></li>
-          <li><a href="https://getbootstrap.com/docs/5.3/getting-started/contribute/">Contributing to Bootstrap</a></li>
-        </ul>
-      </main>
-
-      <footer class="mt-5 mb-4 pt-3 border-top">
-        <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
-      </footer>
-    </div>
+    <footer class="mt-5 mb-4 pt-3 border-top">
+      <div class="container">
+        <p class="text-muted small">Copyright &amp;2024 Marketplace. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
